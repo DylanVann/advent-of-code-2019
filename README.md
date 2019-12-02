@@ -1,6 +1,8 @@
-# advent-of-code
+# advent-of-code-2019
 
-A project which demonstrates a Reason workflow with [Esy][].
+Solutions to Advent of Code 2019.
+
+Built with [Esy][].
 
 [esy]: https://github.com/esy/esy
 
