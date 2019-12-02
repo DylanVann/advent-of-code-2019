@@ -1,0 +1,12 @@
+(library (name AdventOfCodeTest) (public_name advent-of-code.test)
+    (modules (:standard \ AdventOfCodeTestPesyModules))
+    (libraries advent-of-code.test.pesy-modules)
+    (flags -linkall -g -w -9 -open AdventOfCodeTestPesyModules))
+(library (public_name advent-of-code.test.pesy-modules)
+    (name AdventOfCodeTestPesyModules) (modules AdventOfCodeTestPesyModules)
+    (libraries advent-of-code.library rely.lib))
+(rule
+    (with-stdout-to AdventOfCodeTestPesyModules.re
+        (run echo
+             "module Library = AdventOfCodeLibrary;\
+            \nmodule Rely = Rely;")))

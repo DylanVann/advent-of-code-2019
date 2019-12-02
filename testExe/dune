@@ -1,0 +1,11 @@
+(executable (name RunAdventOfCodeTests)
+    (modules (:standard \ AdventOfCodeTestExePesyModules))
+    (public_name RunAdventOfCodeTests.exe)
+    (libraries advent-of-code.testExe.pesy-modules)
+    (flags -open AdventOfCodeTestExePesyModules))
+(library (public_name advent-of-code.testExe.pesy-modules)
+    (name AdventOfCodeTestExePesyModules)
+    (modules AdventOfCodeTestExePesyModules) (libraries advent-of-code.test))
+(rule
+    (with-stdout-to AdventOfCodeTestExePesyModules.re
+        (run echo "module Test = AdventOfCodeTest;")))

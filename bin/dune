@@ -1,0 +1,11 @@
+(executable (name AdventOfCodeApp)
+    (modules (:standard \ AdventOfCodeBinPesyModules))
+    (public_name AdventOfCodeApp.exe)
+    (libraries advent-of-code.bin.pesy-modules)
+    (flags -open AdventOfCodeBinPesyModules))
+(library (public_name advent-of-code.bin.pesy-modules)
+    (name AdventOfCodeBinPesyModules) (modules AdventOfCodeBinPesyModules)
+    (libraries advent-of-code.library))
+(rule
+    (with-stdout-to AdventOfCodeBinPesyModules.re
+        (run echo "module Library = AdventOfCodeLibrary;")))

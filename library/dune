@@ -1,0 +1,14 @@
+(library (name AdventOfCodeLibrary) (public_name advent-of-code.library)
+    (modules (:standard \ AdventOfCodeLibraryPesyModules))
+    (libraries advent-of-code.library.pesy-modules)
+    (flags -open AdventOfCodeLibraryPesyModules))
+(library (public_name advent-of-code.library.pesy-modules)
+    (name AdventOfCodeLibraryPesyModules)
+    (modules AdventOfCodeLibraryPesyModules)
+    (libraries console.lib pastel.lib str))
+(rule
+    (with-stdout-to AdventOfCodeLibraryPesyModules.re
+        (run echo
+             "module Console = Console;\
+            \nmodule Pastel = Pastel;\
+            \nmodule Str = Str;")))
