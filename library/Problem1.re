@@ -1,12 +1,12 @@
 let getFuel = (mass: int): int =>
   int_of_float(floor(float_of_int(mass) /. 3.0)) - 2;
 
-let rec getFuelAccountingForFuelForFuel = (fuelMass: int): int => {
-  let fuelForFuel = getFuel(fuelMass);
-  if (fuelForFuel < 0) {
+let rec getFuelAccountingForFuelForFuel = (mass: int): int => {
+  let fuel = getFuel(mass);
+  if (fuel < 0) {
     0;
   } else {
-    fuelForFuel + getFuelAccountingForFuelForFuel(fuelForFuel);
+    fuel + getFuelAccountingForFuelForFuel(fuel);
   };
 };
 
