@@ -10,7 +10,7 @@ let rec getFuelAccountingForFuelForFuel = (mass: int): int => {
   };
 };
 
-let problem_1_a = input => {
+let a = input => {
   let lines = Str.split(Str.regexp("\n"), input);
   List.fold_left(
     (acc, mass) => acc + getFuel(int_of_string(mass)),
@@ -19,7 +19,7 @@ let problem_1_a = input => {
   );
 };
 
-let problem_1_b = input => {
+let b = input => {
   let lines = Str.split(Str.regexp("\n"), input);
   List.fold_left(
     (acc, mass) =>

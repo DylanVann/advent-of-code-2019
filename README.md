@@ -2,9 +2,7 @@
 
 Solutions to Advent of Code 2019.
 
-Built with [Esy][].
-
-[esy]: https://github.com/esy/esy
+Built with [Reason](https://reasonml.github.io/) and [Esy](https://esy.sh/) / [Pesy](https://github.com/jordwalke/pesy).
 
 ## Usage
 
