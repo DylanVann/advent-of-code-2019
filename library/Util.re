@@ -1,3 +1,10 @@
+/** Returns a colorful "Hello, World" message.
+
+    {4 Examples}
+
+    {[
+    print_endline(hello());
+    ]} */
 let hello = () =>
   Pastel.(
     <Pastel>
@@ -8,6 +15,7 @@ let hello = () =>
     </Pastel>
   );
 
+/** Get the input for a given problem. */
 let getProblemInput = (number: int) => {
   let file = "input/" ++ string_of_int(number) ++ "/input.txt";
   let ic = open_in(file);
@@ -24,3 +32,7 @@ let getProblemInput = (number: int) => {
     raise(e);
   };
 };
+
+let add = (a, b) => a + b;
+
+let multiply = (a, b) => a * b;
