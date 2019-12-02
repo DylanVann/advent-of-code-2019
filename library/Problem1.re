@@ -4,15 +4,10 @@ let getFuel = (mass: int): int =>
 let rec getFuelAccountingForFuelForFuel = (fuelMass: int): int => {
   let fuelForFuel = getFuel(fuelMass);
   if (fuelForFuel < 0) {
-    fuelMass;
+    0;
   } else {
-    fuelMass + getFuelAccountingForFuelForFuel(fuelForFuel);
+    fuelForFuel + getFuelAccountingForFuelForFuel(fuelForFuel);
   };
-};
-
-let getFuelForModule = moduleMass => {
-  let fuel = getFuel(moduleMass);
-  getFuelAccountingForFuelForFuel(fuel);
 };
 
 let problem_1_a = input => {
@@ -27,7 +22,8 @@ let problem_1_a = input => {
 let problem_1_b = input => {
   let lines = Str.split(Str.regexp("\n"), input);
   List.fold_left(
-    (acc, mass) => acc + getFuelForModule(int_of_string(mass)),
+    (acc, mass) =>
+      acc + getFuelAccountingForFuelForFuel(int_of_string(mass)),
     0,
     lines,
   );
