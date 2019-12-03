@@ -1,20 +1,3 @@
-/** Returns a colorful "Hello, World" message.
-
-    {4 Examples}
-
-    {[
-    print_endline(hello());
-    ]} */
-let hello = () =>
-  Pastel.(
-    <Pastel>
-      <Pastel color=Red> "Hello" </Pastel>
-      ", "
-      <Pastel color=Green> "World" </Pastel>
-      "!"
-    </Pastel>
-  );
-
 /** Get the input for a given problem. */
 let getProblemInput = (number: int) => {
   let file = "input/" ++ string_of_int(number) ++ "/input.txt";
@@ -36,3 +19,7 @@ let getProblemInput = (number: int) => {
 let add = (a, b) => a + b;
 
 let multiply = (a, b) => a * b;
+
+let splitLines = input => Str.split(Str.regexp("\n"), input);
+
+let splitCommas = input => Str.split(Str.regexp(","), input);
