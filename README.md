@@ -4,6 +4,12 @@ Solutions to Advent of Code 2019.
 
 Built with [Reason](https://reasonml.github.io/) and [Esy](https://esy.sh/) / [Pesy](https://github.com/jordwalke/pesy).
 
+Solutions generally include:
+
+- An input file: [input/1/input.txt](input/1/input.txt)
+- A solution file: [library/Problem1.re](library/Problem1.re)
+- A test file: [test/Problem1Test.re](test/Problem1Test.re)
+
 ## Usage
 
 You need Esy, you can install the beta using [npm](https://npmjs.com):
