@@ -24,7 +24,7 @@ let splitLines = input => Str.split(Str.regexp("\n"), input);
 
 let splitCommas = input => Str.split(Str.regexp(","), input);
 
-let int_list_of_string = s =>
+let int_list_of_string = (s: string) =>
   List.init(String.length(s), l => int_of_string(String.make(1, s.[l])));
 
 let print_opt = n =>
@@ -48,3 +48,6 @@ let rec range = (start: int, end_: int) =>
   } else {
     [start, ...range(start + 1, end_)];
   };
+
+let string_of_int_array = (mem: array(int)) =>
+  String.concat(",", List.map(string_of_int, Array.to_list(mem)));

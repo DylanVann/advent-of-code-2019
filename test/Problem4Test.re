@@ -1,5 +1,4 @@
 open TestFramework;
-open Library;
 open Library.Problem4;
 
 describe("problem 4", ({test}) => {
