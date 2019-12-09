@@ -29,4 +29,8 @@ K)L";
   test("a", ({expect}) => {
     expect.int(a(input)).toBe(223251)
   });
+
+  test("b", ({expect}) => {
+    expect.int(b(input)).toBe(223251)
+  });
 });

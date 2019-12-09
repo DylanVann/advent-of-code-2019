@@ -48,3 +48,5 @@ let a = (input: string) => {
 
   totalCount;
 };
+
+let b = a;
