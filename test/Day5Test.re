@@ -1,9 +1,9 @@
 open TestFramework;
-open Library.Problem5;
+open Library.Day5;
 
 let input = Library.Util.getProblemInput(5);
 
-describe("problem 5", ({test}) => {
+describe("day 5", ({test}) => {
   test("modes", ({expect}) => {
     expect.string(general("1101,100,-1,4,0", 0).mem).toEqual(
       "1101,100,-1,4,99",

@@ -1,6 +1,6 @@
 /** Get the input for a given problem. */
 let getProblemInput = (number: int) => {
-  let file = "input/" ++ string_of_int(number) ++ "/input.txt";
+  let file = "input/" ++ "Day" ++ string_of_int(number) ++ ".txt";
   let ic = open_in(file);
   try({
     let numberOfBytes = in_channel_length(ic);

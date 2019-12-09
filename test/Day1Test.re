@@ -1,9 +1,9 @@
 open TestFramework;
-open Library.Problem1;
+open Library.Day1;
 
 let input = Library.Util.getProblemInput(1);
 
-describe("problem 1", ({test}) => {
+describe("day 1", ({test}) => {
   test("a", ({expect}) => {
     expect.int(a(string_of_int(1969))).toBe(654);
     expect.int(a(input)).toBe(3423511);

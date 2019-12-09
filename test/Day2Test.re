@@ -1,9 +1,9 @@
 open TestFramework;
-open Library.Problem2;
+open Library.Day2;
 
 let input = Library.Util.getProblemInput(2);
 
-describe("problem 2", ({test}) => {
+describe("day 2", ({test}) => {
   test("general", ({expect}) => {
     expect.string(general("1,0,0,0,99")).toEqual("2,0,0,0,99");
     expect.string(general("2,0,0,0,99")).toEqual("4,0,0,0,99");

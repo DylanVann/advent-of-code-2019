@@ -30,7 +30,21 @@ let isValid = (v: int, allowMoreThanDoubles: bool): bool => {
   hasDouble^ && onlyIncreases^;
 };
 
-let a = (a: int, b: int) => {
+type parsed = {
+  a: int,
+  b: int,
+};
+
+let parse = (input: string) => {
+  let values = Util.splitCommas(input);
+  {
+    a: int_of_string(List.nth(values, 0)),
+    b: int_of_string(List.nth(values, 1)),
+  };
+};
+
+let a = (input: string) => {
+  let {a, b} = parse(input);
   let validPasswords = ref(0);
   for (i in a to b) {
     if (isValid(i, true)) {
@@ -40,7 +54,8 @@ let a = (a: int, b: int) => {
   validPasswords^;
 };
 
-let b = (a: int, b: int) => {
+let b = (input: string) => {
+  let {a, b} = parse(input);
   let validPasswords = ref(0);
   for (i in a to b) {
     if (isValid(i, false)) {

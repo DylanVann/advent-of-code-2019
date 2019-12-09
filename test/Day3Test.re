@@ -1,10 +1,10 @@
 open TestFramework;
 open Library;
-open Library.Problem3;
+open Library.Day3;
 
 let input = Library.Util.getProblemInput(3);
 
-describe("problem 3", ({test}) => {
+describe("day 3", ({test}) => {
   test("a", ({expect}) => {
     expect.int(
       a(

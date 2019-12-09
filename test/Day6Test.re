@@ -1,5 +1,5 @@
 open TestFramework;
-open Library.Problem6;
+open Library.Day6;
 
 let input = Library.Util.getProblemInput(6);
 
