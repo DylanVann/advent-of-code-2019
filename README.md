@@ -6,9 +6,9 @@ Built with [Reason](https://reasonml.github.io/) and [Esy](https://esy.sh/) / [P
 
 Solutions generally include:
 
-- An input file: [input/Day1.txt](input/Day1.txt)
-- A solution file: [library/Day1.re](library/Day1.re)
-- A test file: [test/Day1Test.re](test/Day1Test.re)
+- Input: [input/Day1.txt](input/Day1.txt)
+- Solution: [library/Day1.re](library/Day1.re)
+- Test: [test/Day1Test.re](test/Day1Test.re)
 
 ## Usage
 
