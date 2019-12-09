@@ -1,3 +1,5 @@
+open Util;
+
 type state = {
   x: int,
   y: int,
@@ -20,8 +22,6 @@ let getNextPoint = (s: state, direction: string, steps: int) => {
   };
 };
 
-module StringMap = Map.Make(String);
-
 type result = {
   minManhattanDistance: int,
   minCombinedSteps: int,
@@ -33,7 +33,7 @@ let calculate = (l1: list(string), l2: list(string)): result => {
   let minManhattanDistance = ref(max_int);
 
   List.fold_left(
-    (acc, v) => {
+    (acc: state, v: string) => {
       let direction = String.make(1, v.[0]);
       let steps = int_of_string(String.sub(v, 1, String.length(v) - 1));
       for (s in 0 to steps) {

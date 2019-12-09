@@ -20,9 +20,11 @@ let add = (a, b) => a + b;
 
 let multiply = (a, b) => a * b;
 
-let splitLines = input => Str.split(Str.regexp("\n"), input);
+let splitLines = (input: string): list(string) =>
+  Str.split(Str.regexp("\n"), input);
 
-let splitCommas = input => Str.split(Str.regexp(","), input);
+let splitCommas = (input: string): list(string) =>
+  Str.split(Str.regexp(","), input);
 
 let int_list_of_string = (s: string) =>
   List.init(String.length(s), l => int_of_string(String.make(1, s.[l])));
@@ -51,3 +53,5 @@ let rec range = (start: int, end_: int) =>
 
 let string_of_int_array = (mem: array(int)) =>
   String.concat(",", List.map(string_of_int, Array.to_list(mem)));
+
+module StringMap = Map.Make(String);
