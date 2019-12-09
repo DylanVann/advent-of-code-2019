@@ -55,3 +55,12 @@ let string_of_int_array = (mem: array(int)) =>
   String.concat(",", List.map(string_of_int, Array.to_list(mem)));
 
 module StringMap = Map.Make(String);
+
+let rec indexOf = (a, x, n): int =>
+  if (n > List.length(a) - 1) {
+    (-1);
+  } else if (List.nth(a, n) == x) {
+    n;
+  } else {
+    indexOf(a, x, n + 1);
+  };

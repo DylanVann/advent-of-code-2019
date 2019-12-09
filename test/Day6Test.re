@@ -31,6 +31,20 @@ K)L";
   });
 
   test("b", ({expect}) => {
-    expect.int(b(input)).toBe(223251)
+    let example = "COM)B
+B)C
+C)D
+D)E
+E)F
+B)G
+G)H
+D)I
+E)J
+J)K
+K)L
+K)YOU
+I)SAN";
+    expect.int(b(example)).toBe(4);
+    expect.int(b(input)).toBe(430);
   });
 });
