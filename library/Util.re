@@ -64,3 +64,16 @@ let rec indexOf = (a, x, n): int =>
   } else {
     indexOf(a, x, n + 1);
   };
+
+let rm = (x, l) => List.filter((!=)(x), l);
+
+let rec permutations =
+  fun
+  | [] => []
+  | [x] => [[x]]
+  | l =>
+    List.fold_left(
+      (acc, x) => acc @ List.map(p => [x, ...p], permutations(rm(x, l))),
+      [],
+      l,
+    );
