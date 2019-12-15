@@ -26,8 +26,14 @@ let splitLines = (input: string): list(string) =>
 let splitCommas = (input: string): list(string) =>
   Str.split(Str.regexp(","), input);
 
-let int_list_of_string = (s: string) =>
-  List.init(String.length(s), l => int_of_string(String.make(1, s.[l])));
+let splitInts = (s: string): list(int) =>
+  List.init(
+    String.length(s),
+    l => {
+      let sub = String.make(1, s.[l]);
+      int_of_string(sub);
+    },
+  );
 
 let print_opt = n =>
   switch (n) {

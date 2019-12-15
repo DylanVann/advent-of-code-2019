@@ -60,7 +60,7 @@ let getOpCodeInfo = (value: int): opCodeInfo => {
 };
 
 let getParameterMode = (modeDigits: int, position: int): parameterMode => {
-  let intList = Util.int_list_of_string(string_of_int(modeDigits));
+  let intList = Util.splitInts(string_of_int(modeDigits));
   let atPos = Util.nth_opt(intList, List.length(intList) - 1 - position);
   switch (atPos) {
   | Some(0) => Position

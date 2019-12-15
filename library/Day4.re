@@ -3,7 +3,7 @@ let isValid = (v: int, allowMoreThanDoubles: bool): bool => {
   let maxNum = ref(0);
   let hasDouble = ref(false);
   let onlyIncreases = ref(true);
-  let digits = Util.int_list_of_string(stringRep);
+  let digits = Util.splitInts(stringRep);
   List.mapi(
     (i: int, x1: int) => {
       let x0 = Util.nth_opt(digits, i - 1);
